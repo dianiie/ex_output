@@ -54,6 +54,11 @@ function window (action: string) {
         }
     }
 }
+function Lamp (level: number) {
+    light2 = level
+    pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
+    basic.pause(500)
+}
 function CCW () {
     for (let index = 0; index <= 180; index++) {
         pins.servoWritePin(AnalogPin.P16, 180 - index)
@@ -77,22 +82,7 @@ function cloths2 (action: string) {
         }
     }
 }
+let light2 = 0
 let dgr = 0
-let light2 = 5
-pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
-basic.pause(1000)
-light2 = 4
-pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
-basic.pause(1000)
-light2 = 3
-pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
-basic.pause(1000)
-light2 = 2
-pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
-basic.pause(1000)
-light2 = 1
-pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
-basic.pause(1000)
-light2 = 0
-pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
-basic.pause(1000)
+Lamp(1)
+Lamp(5)
