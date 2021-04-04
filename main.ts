@@ -78,6 +78,21 @@ function cloths2 (action: string) {
     }
 }
 let dgr = 0
-door("o")
+let light2 = 5
+pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
 basic.pause(1000)
-door("c")
+light2 = 4
+pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
+basic.pause(1000)
+light2 = 3
+pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
+basic.pause(1000)
+light2 = 2
+pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
+basic.pause(1000)
+light2 = 1
+pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
+basic.pause(1000)
+light2 = 0
+pins.analogWritePin(AnalogPin.P0, Math.map(light2, 0, 5, 0, 1023))
+basic.pause(1000)
